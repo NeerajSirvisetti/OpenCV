@@ -1,0 +1,28 @@
+# import the necessary packages
+from matplotlib import pyplot as plt
+import cv2
+
+# Displaying images
+def plt_imshow(title, image):
+    # convert the image frame BGR to RGB color space and display it
+    image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+    plt.imshow(image)
+    plt.title(title)
+    plt.grid(False)
+    plt.show()
+
+image = cv2.imread(<Path to the Image")
+
+canvas = np.zeros((300, 300, 3), dtype="uint8")
+green = (0, 255, 0)
+cv2.line(<image ex: canvas>, <starting point EX: (0, 0)>, <ending point EX: (300, 300)>, <bgr color: ex green>,<thickness>)
+
+# draw another rectangle, this one red with 5 pixel thickness
+cv2.rectangle(canvas, (50, 200), (200, 225), red, 5)
+plt_imshow("Canvas", canvas)
+
+# draw a final rectangle (blue and filled in )
+blue = (255, 0, 0)
+cv2.rectangle(canvas, (200, 50), (225, 125), blue, -1)
+plt_imshow("Canvas", canvas)
+
